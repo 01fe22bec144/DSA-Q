@@ -1,0 +1,22 @@
+#include<stdio.h>
+void bus_fare(int,float);
+main()
+{
+  int age;
+  float bf;
+  printf("enter the value of bf and age of person\n");
+  scanf("%f%d",&bf,&age);
+  bus_fare(age,bf);
+}
+void bus_fare(int age,float bf)
+{
+    if(age>=60)
+    {
+        bf=bf-(0.02*bf);
+        printf("bus_fare=%f",bf);
+    }
+    else
+    {
+        printf("No discount is applied\n");
+    }
+}
