@@ -1,0 +1,28 @@
+#include<stdio.h>
+int p_num(int);
+main()
+{
+    int n,r;
+    printf("enter the value of n\n");
+    scanf("%d",&n);
+    r=p_num(n);
+    if(r==n)
+    {
+        printf("Num is palindrome\n");
+    }
+    else
+    {
+        printf("Num is not palindrome\n");
+    }
+}
+int p_num(int n)
+{
+    int ld,r=0;
+    while(n!=0)
+    {
+        ld=n%10;
+        r=r*10+ld;
+        n=n/10;
+    }
+    return r;
+}
