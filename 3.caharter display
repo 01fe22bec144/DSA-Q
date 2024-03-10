@@ -1,0 +1,28 @@
+#include<stdio.h>
+void display_c(char ch);
+mani()
+{
+    char ch;
+    printf("Enter the character\n");
+    scanf("%c",&ch);
+    display_c(ch);
+}
+void display_c(char ch)
+{
+    if(ch>=65 && ch<=90)
+    {
+        printf("Capital letter\n");
+    }
+    else if(ch>=97 && ch<=122)
+    {
+        printf("Small letter\n");
+    }
+    else if(ch>=48 && ch<=57)
+    {
+        printf("Digits\n");
+    }
+    else
+    {
+        printf("Special symbol\n");
+    }
+}
