@@ -1,0 +1,51 @@
+#include<stdio.h>
+void bubble_sort(int,int[10]);
+void read(int,int array[10]);
+void display(int,int array[10]);
+void main()
+{
+    int n,array[20];
+    printf("enter a number\n");
+    scanf("%d",&n);
+    read(n,array);
+    display(n,array);
+    bubble_sort(n,array);
+    printf("\n");
+
+    display(n,array);
+
+}
+void bubble_sort(int n,int array[10])
+{
+    int i,j,temp;
+    for(i=0;i<n-1;i++)
+    {
+        for(j=0;j<n-1-i;j++)
+        {
+            if(array[j]>array[j+1])
+            {
+            temp=array[j];
+            array[j]=array[j+1];
+            array[j+1]=temp;
+
+            }
+        }
+
+    }
+}
+void read(int n,int array[10])
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+      scanf("%d ",&array[i]);
+    }
+}
+void display(int n,int array[10])
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+        printf("%d ",array[i]);
+    }
+}
